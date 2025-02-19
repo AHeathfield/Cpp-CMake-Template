@@ -20,6 +20,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 # The file is included as described below
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# This is so the executable is ignored from git
+set(GITIGNORE_PATH "${CMAKE_SOURCE_DIR}/.gitignore")
+
+# NOTE: In this case CMAKE_SOURCE_DIR = PROJECT_SOURCE_DIR
+
 # This creates a variable called SOURCES which basically contains all the cpp files in src
 file(GLOB SOURCES "${PROJECT_SOURCE_DIR}/src/*.cpp")
 
